@@ -4,84 +4,91 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width initial-scale=1.0" />
     <title>Technical Documentation Page</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <nav id="navbar">
-      <header><h1>CSS Flexbox and Grid Documentation</h1></header>
+      <header><h1>CSS Documentation</h1></header>
       <a href="#Introduction" class="nav-link">Introduction</a>
       <a href="#Prerequisites" class="nav-link">Prerequisites</a>
-      <a href="#CSS_Layout" class="nav-link">CSS Layout</a>
-      <a href="#Flexbox" class="nav-link">Flexbox</a>
-      <a href="#Grid" class="nav-link">Grid</a>
+      <a href="#CSS_Syntax" class="nav-link">CSS Syntax</a>
+      <a href="#Comments_in_CSS" class="nav-link">Comments in CSS</a>
+      <a href="#Applying_CSS" class="nav-link">Applying CSS</a>
       <a href="#reference" class="nav-link">Reference</a>
     </nav>
+
+    <!-- main section -->
     <main id="main-doc">
       <section class="main-section" id="Introduction">
         <header><h1>Introduction</h1></header>
-        <p></p>
-        <p></p>
-      </section>
-      <section class="main-section" id="Prerequisites">
-        <header><h2>Prerequisites</h2></header>
+        
+        <p>CSS  -  Cascading Style Sheets - is the language for handling the look and feel of web pages. CSS handles how web pages appear to users, that is the presentation and accessibility of the document to users.</p>
 
-        <p>
-          To get the best of this documentation, you are expected to know the
-          following -
-        </p>
-        <ul>
-          <li>HTML</li>
-          <li>Basic CSS</li>
-          <li>How the web works</li>
-        </ul>
+        <p>CSS can be used for basic styling of texts, to complex effects like animations. For example, CSS can be used to define color, font-size, and/or background of websites created in a markup language (HTML) document.</p>
       </section>
-      <section class="main-section" id="CSS_Layout">
-        <header><h2>CSS Layout</h2></header>
-        <p>A layout is a ...</p>
-        <p>Basic properties of layouts</p>
-        <!-- List properties of layouts -->
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-        <!-- Code sample here -->
+      <section class="main-section" id="Prerequisites"><header><h2>Prerequisites</h2></header>
+      
+      <p>To get the best of this documentation, you are expected to know the following - </p>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works" target="_blank">How the web works</a></li>
+        </ul></section>
+
+        <!-- End of Prerequisite -->
+      <section class="main-section" id="CSS_Syntax"><header><h2>CSS Syntax</h2></header>      
+      <p>CSS syntax takes the form of a rule-based language. You define rules stating how styles should be applied to particular element(s) on a web page.</p>
+      <p>The syntax consist of <code>selector(s)</code>, and <code>property: value;</code> pair which is referred to as declaration.</p>
+      
+      <pre><code>
+            selector {
+              property: value;
+            }
+      </code></pre>
+
+<p>We can have more than one property: value; pair in a CSS rule. And this will we call a declaration block.  Let’s assume that you want the heading of your web page to be of text blue and a font size of 6em. You will achieve this in CSS, writing the rule as a declaration block, like so.</p>
+
+  <pre><code>           h1 {
+            color: blue;
+            font-size: 6em;
+          }
+        </code>
+  </pre>
+      <!-- Code sample here --></section>
+      <section class="main-section" id="Comments_in_CSS"><header><h2>Comments in CSS</h2></header>
+      <p>Comments  are  non executable piece of code </p>
+      <p>In CSS, comments can be written in two ways -</p>
+      <!-- List properties of flexbox -->
+      <ul>
+        <li>Single line comments like so <code>/* This is a single line comment in CSS */</code></li>
+
+        <li>Multi-line comments like so 
+          <pre><code>/* This is a single line 
+          comment in CSS */</code></pre> </li>
+      </ul>
       </section>
-      <section class="main-section" id="Flexbox">
-        <header><h2>Flexbox</h2></header>
-        <p>Flexbox is a ...</p>
-        <p>Basic properties of Flexbox</p>
-        <!-- List properties of flexbox -->
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-        <p></p>
-        <!-- Code sample here -->
-        <p></p>
-        <!-- Code sample here -->
+      <section class="main-section" id="Applying_CSS"><header><h2>Applying CSS</h2></header>
+      <p>The earlier part of this article focused on defining CSS and its syntax, but CSS is meant to work closely with markup documents like HTML.  So how do we apply CSS to a web app - HTML document? </p>
+      
+      <ul>
+        <li><h3>Inline Style</h3></li>
+        <p>A single HTML element can be styled, by applying CSS inside the style attribute of the HTML element.</p>
+        <pre>
+          <code>
+            <span style="color: red;">Red text styled in-line</span>
+          </code>
+        </pre>
+
+        <li><h3>Internal Style</h3>
+          <p>You apply CSS internally to an HTML document by putting the <code>&lt;style&gt;</code> element, in the <code>&lt;head&gt;</code> of the HTML document.</p>
+           <li><h3>External Style</h3>
+          <p>You apply a stylesheet to an HTML document using the <code>&lt;link&gt;</code> element like this, <pre><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre> and this will be in the head of the HTML document.</p>
+      </ul>
       </section>
-      <section class="main-section" id="Grid">
-        <header><h2>Grid</h2></header>
-        <p>Grid is a ...</p>
-        <p>Basic properties of Grid</p>
-        <!-- List properties of flexbox -->
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-        <p></p>
-        <!-- Code sample here -->
-        <p></p>
-        <!-- Code sample here -->
-        <p></p>
-      </section>
-      <section class="main-section" id="reference">
-        <header><h2>Reference</h2></header>
-        <p></p>
-        <p></p>
+      <section class="main-section" id="reference"><header><h2>Reference</h2></header>
+      <p>This documentation was originally written by Charles Freeborn <a href="https://freeborncharles.com/what-is-css/" target="_blank">here</a>
+      </p>
+      
+      <p>Learn about <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps" target="_blank">CSS on the MDN docs</a>.</p>
       </section>
     </main>
   </body>
