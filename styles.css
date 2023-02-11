@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  /* padding: 0; */
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.2;
+  width: 70%;
+}
+
+#navbar {
+  border: 2px solid black;
+  position: relative;
+  background-color: yellow;
+  width: 40%;
+  height: 100%;
+}
+
+#navbar .nav-link {
+  text-decoration: none;
+  color: #000;
+}
+
+#main-doc {
+  float: right;
+  margin-left: 40px;
+  width: 50%;
+  height: 100%;
+}
+pre code {
+  background-color: #eee;
+  /* border: 1px solid #999; */
+  display: block;
+  padding: 10px;
+}
